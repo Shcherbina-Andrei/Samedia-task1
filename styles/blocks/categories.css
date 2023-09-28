@@ -1,0 +1,160 @@
+.categories {
+  position: relative;
+
+  width: 100%;
+  max-width: 1920px;
+
+  margin: 0 auto;
+  padding: 152px 0;
+
+  background: url("../../images/decor-2.png") left bottom no-repeat,
+              url("../../images/decor.png") right 586px top no-repeat,
+              url("../../images/circle.svg") right -30px top no-repeat;
+}
+
+.categories__wrapper {
+  width: 84%;
+
+  margin: 0 auto;
+}
+
+.categories__title {
+  margin-bottom: 68px;
+}
+
+.categories__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  margin: 0 auto;
+  
+  list-style: none;
+}
+
+.categories__item {
+  width: 376px;
+  height: 188px;
+}
+
+
+.categories__leaf-decor {
+  position: absolute;
+  top: 77px;
+  left: 0;
+}
+
+.categories__item--with-leaf {
+  position: relative;
+}
+
+.categories__dark-leaf-decor {
+  position: absolute;
+  bottom: -60px;
+  right: 10px;
+}
+
+@media (max-width: 1440px) {
+  .categories {
+    width: 100%;
+
+    padding: 140px 0;
+
+    background: url("../../images/decor-2.png") left bottom no-repeat,
+                url("../../images/decor.png") right 386px top no-repeat,
+                url("../../images/circle.svg") right -80px top no-repeat;
+  }
+
+  .categories__list {
+    flex-wrap: wrap;
+
+    gap: 22px;
+  }
+
+  .categories__item {
+    width: 246px;
+    height: 156px;
+  }
+
+  .categories__leaf-decor {
+    top: 77px;
+    left: 10px;
+
+    width: 140px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 1280px) {
+  .categories {
+    padding-top: 100px;
+    padding-bottom: 140px;
+
+    background: url("../../images/decor-2.png") left bottom / 10% no-repeat,
+                url("../../images/decor.png") right 286px top / 10% no-repeat,
+                url("../../images/circle.svg") right -40px top / 25% no-repeat;
+  }
+
+  .categories__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  .categories__item {
+    width: 100%;
+    min-width: 60%;
+    height: 168px;
+  }
+
+  .categories__leaf-decor {
+    top: 57px;
+    left: 0;
+  }
+
+  .categories__dark-leaf-decor {
+    bottom: -40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .categories {
+    width: 100%;
+
+    padding: 60px 0;
+
+    background: url("../../images/decor-2.png") left bottom / 12% no-repeat,
+                url("../../images/decor.png") right 86px top / 15% no-repeat,
+                url("../../images/circle.svg") right -40px top / 40% no-repeat;
+  }
+
+  .categories__list {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+  }
+
+  .categories__item {
+    height: 144px;
+  }
+
+  .categories__leaf-decor {
+    display: none;
+  }
+  
+  .categories__dark-leaf-decor {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories__item {
+    height: 124px;
+  }
+}
+
+@media (max-width: 320px) {
+  .categories {
+    background: none;
+  }
+}

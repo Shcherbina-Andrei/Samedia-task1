@@ -1,0 +1,26 @@
+.decor-leaf {
+  --x: 0px;
+  --y: 0px;
+
+  transform: translate(var(--x), var(--y));
+
+  z-index: -1;
+}
+
+@media (max-width: 1280px) {
+  .decor-leaf--green {
+    width: 120px;
+    height: fit-content;
+  }
+
+  .decor-leaf--dark {
+    width: 80px;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 767px) {
+  .decor-leaf--green {
+    width: 70px;
+  }
+}

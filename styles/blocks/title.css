@@ -1,0 +1,25 @@
+.title {
+  position: relative;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+
+  width: 88px;
+  height: 4px;
+
+  background-color: #FFCC01;
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 34px;
+  }
+}

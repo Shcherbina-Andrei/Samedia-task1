@@ -1,0 +1,113 @@
+.link {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 16px;
+
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  border: 2px solid #79C800;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 4px 16px 0 rgb(0, 0, 0, 0.25);
+  background-color: transparent;
+}
+
+.link__circles-group {
+  display: none;
+}
+
+.link:hover {
+  background-color: rgba(120, 200, 0, 0.4);
+}
+
+.link:hover .link__circles-group {
+  display: block;
+}
+
+
+.link--pesticides {
+  background-image: url("../../images/pesticides-start.png");
+}
+
+.link--pesticides:hover {
+  background-image: url("../../images/pesticides-end.png");
+}
+
+.link--cultures {
+  background-image: url("../../images/cultures-start.png");
+}
+
+.link--cultures:hover {
+  background-image: url("../../images/cultures-end.png");
+}
+
+.link--pests {
+  background-image: url("../../images/pests-start.png");
+}
+
+.link--pests:hover {
+  background-image: url("../../images/pests-end.png");
+}
+
+.link--substance {
+  background-image: url("../../images/substance-start.png");
+}
+
+.link--substance:hover {
+  background-image: url("../../images/substance-end.png");
+}
+
+.link:hover .link__circle {
+  display: block;
+}
+
+@media (max-width: 1920px) {
+  .link {
+    font-size: 20px;
+    background-size: 70%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .link {
+    padding: 12px
+  }
+}
+
+@media (max-width: 1280px) {
+  .link {
+    font-size: 24px;
+
+    background-size: 55%;
+  }
+}
+
+@media (max-width: 767px) {
+  .link {
+    background-size: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .link {
+    font-size: 20px; 
+    background-size: 55%;
+  }
+}
