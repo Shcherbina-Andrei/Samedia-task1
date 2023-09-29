@@ -1,25 +1,20 @@
-import { animateByMouse } from './animate-by-mouse.js';
+import { moveByHorizontal, moveByVertical, resetElementPosition } from './helpers.js';
 
 const greenLeaf = document.getElementById('green-leaf');
 const darkLeaf = document.getElementById('dark-leaf');
 
-let prevMouseLocation = {
-  x: 0,
-  y: 0,
-};
+const categoriesItems = document.querySelectorAll('.categories__item');
 
-document.addEventListener('mousemove', (evt) => {
-  const currentMouseLocation = { x: evt.clientX, y: evt.clientY };
-
-  animateByMouse(darkLeaf, currentMouseLocation, prevMouseLocation, {
-    reverseX: true,
+for (let i = 0; i < categoriesItems.length; i++) {
+  categoriesItems[i].addEventListener('mouseover', () => {
+    moveByHorizontal(greenLeaf, categoriesItems.length - i);
+    moveByHorizontal(darkLeaf, categoriesItems.length - i, true);
+    moveByVertical(greenLeaf);
+    moveByVertical(darkLeaf);
   });
-  let { x, y } = animateByMouse(
-    greenLeaf,
-    currentMouseLocation,
-    prevMouseLocation,
-    { reverseY: true }
-  );
 
-  prevMouseLocation = { x, y };
-});
+  categoriesItems[i].addEventListener('mouseout', () => {
+    resetElementPosition(greenLeaf);
+    resetElementPosition(darkLeaf);
+  });
+}
